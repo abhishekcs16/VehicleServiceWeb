@@ -1,0 +1,80 @@
+
+<div class="container">
+    <!-- <div (bookObj) = 'random($event)'> -->
+        <form class="form-horizontal">
+            <input type = "hidden" [(ngModel)] = "service.serviceId" name = "serviceId" />
+            <!-- <div class="form-group">
+                <label class="control-label col-sm-2">Book ID</label>
+                <div class="col-sm-8">
+                    <input type = "text" [(ngModel)] = "book.id" name = "id" class="form-control" />
+                </div>   
+            </div> -->
+            <div class="form-group">
+                <label class="control-label col-sm-2">Service Type</label>
+                <div class="col-sm-8">
+                    <input type = "text" [(ngModel)] = "service.serviceType" name = "serviceType" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Added Part</label>
+                <div class="col-sm-8">
+                        <input type = "text" [(ngModel)] = "service.addedPart" name = "addedPart" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Service Date</label>
+                <div class="col-sm-8">
+                        <input type = "text" [(ngModel)] = "service.serviceDate" name = "serviceDate" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">JobCard ID</label>
+                <div class="col-sm-8">
+                        <input type = "text" [(ngModel)] = "jobCard.jobId" name = "jobId" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Mechanic ID</label>
+                <div class="col-sm-8">
+                        <input type = "text" [(ngModel)] = "mechanic.mechanicId" name = "mechanicId" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <button (click) = "addService()" class = "btn btn-primary" style="margin: 4px;" >Save</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    <!-- <button (click) = "addService()" class = "btn btn-primary">Add Service</button> -->
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <table class = "table table-striped table-bordered">
+            <tr style = "background: lightblue;">
+                <th>Service Id</th>
+                <th>Service Type</th>
+                <th>Added Part</th>
+                <th>Service Date</th>
+                <th>JobCard Id</th>
+                <th>Mechanic Id</th>
+                <th>ACTIONS</th>
+            </tr>
+            <tr *ngFor = "let service of services">
+                <td>{{service.serviceId}}</td>
+                <td>{{service.serviceType}}</td>
+                <td>{{service.addedPart}}</td>
+                <td>{{service.serviceDate}}</td>
+                <td>{{service.jobCard.jobId}}</td>
+                <td>{{service.mechanic.mechanicId}}</td>
+                <td>
+                    <button (click) = "getService(service.serviceId)" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit">Update</span></button>     
+                    &nbsp;
+                </td>
+            </tr>
+            <tr *ngIf = "services && services.length == 0">
+                <td colspan = "8">No records found!</td>
+            </tr>
+        </table>
+    <!-- </div> -->
+</div>
+

@@ -1,0 +1,25 @@
+<div class="container">
+    <nav class="navabar">
+        <input class ="form-control" type="text" name="customerContact" 
+        [(ngModel)]="customerContact" (ngModelChange)="Search()" 
+        placeholder="Enter Contact To Search Customer">
+     </nav>
+    <table class="table table-striped table-bordered">
+        <tr style="background: rgb(74, 196, 70);">
+            <th>Customer Id</th>
+            <th>CustomerName</th>
+            <th>CustomerContact</th>
+            <th>CustomerAddress</th>
+            
+        </tr>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.id}}</td>
+            <td>{{customer.customerName}}</td>
+            <td>{{customer.customerContact}}</td>
+            <td>{{customer.customerAddress}}</td>
+        </tr>
+        <tr *ngIf="customers && customers.length==0">
+            <td colspan="4">No records found !</td>
+        </tr>
+    </table>
+</div>

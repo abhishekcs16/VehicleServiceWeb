@@ -1,0 +1,25 @@
+
+<div class ="container">
+    <table class="table table-striped table-bordered">
+        <tr style = "background: rgb(74, 196, 70);">
+            <th>JobCardId</th>
+                <th>Issues</th>
+                <th>Remark</th>
+                <th>JobCardDate</th>
+                <th>vehicleRegNo</th>
+                
+        </tr>
+        <tr *ngFor = "let jobCard of jobCards">
+            <td>{{jobCard.jobId}}</td>
+                <td>{{jobCard.issues}}</td>
+                <td>{{jobCard.remarks}}</td>
+                <td>{{jobCard.date}}</td>
+                <td>{{jobCard.vehicle.vehicleRegNo}}</td>
+        </tr>
+        <tr *ngIf="jobCards && jobCards.length==0">
+            <td colspan ="6">No records found !</td>
+        </tr>
+    </table>
+</div>
+
+

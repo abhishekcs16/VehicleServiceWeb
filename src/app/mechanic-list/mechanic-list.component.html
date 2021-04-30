@@ -1,0 +1,22 @@
+<div class="container">
+    <nav class="navabar">
+        <input class ="form-control" type="text" name="mechanicContact" 
+        [(ngModel)]="mechanicContact" (ngModelChange)="Search()" 
+        placeholder="Enter Contact To Search Mechanic">
+     </nav>
+    <table class="table table-striped table-bordered">
+        <tr style="background: rgb(74, 196, 70);">
+            <th>id</th>
+            <th>MechanicName</th>
+            <th>MechanicContact</th>
+        </tr>
+        <tr *ngFor="let mechanic of mechanics">
+            <td>{{mechanic.mechanicId}}</td>
+            <td>{{mechanic.mechanicName}}</td>
+            <td>{{mechanic.mechanicContact}}</td>
+        </tr>
+        <tr *ngIf="mechanics && mechanics.length==0">
+            <td colspan="5">No records found !</td>
+        </tr>
+    </table>
+</div>

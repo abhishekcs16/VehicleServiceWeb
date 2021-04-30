@@ -1,0 +1,82 @@
+
+<div class="container">
+    <!-- <div (authorObj) = 'random($event)'> -->
+        <form class="form-horizontal">
+            <input type = "hidden" [(ngModel)] = "invoice.invoiceId" name = "invoiceId"/>
+            <!-- <div class="form-group">
+                <label class="control-label col-sm-2">Author ID</label>
+                <div class="col-sm-8">
+                    <input type = "text" [(ngModel)] = "author.author_id" name = "author_id" class="form-control" />
+                </div>   
+            </div> -->
+            <div class="form-group">
+                <label class="control-label col-sm-2">Labour Charges</label>
+                <div class="col-sm-8">
+                    <input type = "text" [(ngModel)] = "invoice.labourCharges" name = "VehicleModel" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Service Charges</label>
+                <div class="col-sm-8">
+                        <input type = "text" [(ngModel)] = "invoice.serviceCharges" name = "EngineNo" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Invoice Date</label>
+                <div class="col-sm-8">
+                        <input type = "text" [(ngModel)] = "invoice.date" name = "ChasisNo" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Insurance No</label>
+                <div class="col-sm-8">
+                        <input type = "text" [(ngModel)] = "insurance.insuranceNo" name = "id" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Service Id</label>
+                <div class="col-sm-8">
+                        <input type = "text" [(ngModel)] = "service.serviceId" name = "id" class="form-control" />
+                </div>   
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <button (click) = "addInvoice()" class = "btn btn-primary" style="margin: 4px;" >Save</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    <!-- <button (click) = "addInvoice()" class = "btn btn-primary">Add Invoice</button> -->
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <table class = "table table-striped table-bordered">
+            <tr style = "background: lightblue;">
+            <th>InvoiceId</th>
+            <th>LabourCharges</th>
+            <th>ServiceCharges</th>
+            <th>InvoiceDate</th>
+            <th>InsuranceNo</th>
+            <th>Service ID</th>
+            <th>ACTIONS</th>
+            </tr>
+            <tr *ngFor="let invoice of invoices">
+            <td>{{invoice.invoiceId}}</td>
+            <td>{{invoice.labourCharges}}</td>
+            <td>{{invoice.serviceCharges}}</td>
+            <td>{{invoice.date}}</td>
+            <td>{{invoice.insurance.insuranceNo}}</td>
+            <td>{{invoice.service.serviceId}}</td>
+                
+
+                <td>
+                    <button (click) = "getInvoice(invoice.invoiceId)" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-edit">Update</span></button>     
+                    &nbsp;
+                </td>
+            </tr>
+            <tr *ngIf = "invoices && invoices.length == 0">
+                <td colspan = "7">No records found!</td>
+            </tr>
+        </table>
+    <!-- </div> -->
+</div>
+

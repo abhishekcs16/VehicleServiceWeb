@@ -1,0 +1,23 @@
+
+<div class ="container">
+    <table class="table table-striped table-bordered">
+        <tr style = "background: rgb(74, 196, 70);">
+                <th>InsuranceNo</th>
+                <th>InsuranceDate</th>
+                <th>InsuranceAmount</th>
+                <th>Vehicle ID</th>
+                
+        </tr>
+        <tr *ngFor = "let insurance of insurances">
+            <td>{{insurance.insuranceNo}}</td>
+                <td>{{insurance.insuranceDate}}</td>
+                <td>{{insurance.insuranceAmount}}</td>
+                <td>{{insurance.vehicle.vehicleRegNo}}</td>
+        </tr>
+        <tr *ngIf="insurances && insurances.length==0">
+            <td colspan ="6">No records found !</td>
+        </tr>
+    </table>
+</div>
+
+

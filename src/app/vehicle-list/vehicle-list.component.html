@@ -1,0 +1,26 @@
+
+<div class ="container">
+    <table class="table table-striped table-bordered">
+        <tr style = "background: rgb(74, 196, 70);">
+            <th>Vehicle ID</th>
+                <th>Model</th>
+                <th>EngineNo</th>
+                <th>ChasisNo</th>
+                <th>CustomerName</th>
+                <th>Customer ID</th>
+                
+        </tr>
+        <tr *ngFor = "let vehicle of vehicles">
+            <td>{{vehicle.vehicleRegNo}}</td>
+            <td>{{vehicle.vehicleModel}}</td>
+            <td>{{vehicle.engineNo}}</td>
+            <td>{{vehicle.chasisNo}}</td>
+            <td>{{vehicle.customer.customerName}}</td>
+            <td>{{vehicle.customer.id}}</td>
+        </tr>
+        <tr *ngIf="vehicles && vehicles.length==0">
+            <td colspan ="6">No records found !</td>
+        </tr>
+    </table>
+</div>
+

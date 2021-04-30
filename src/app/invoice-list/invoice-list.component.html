@@ -1,0 +1,27 @@
+
+<div class ="container">
+    <table class="table table-striped table-bordered">
+        <tr style = "background: rgb(74, 196, 70);">
+            <th>InvoiceId</th>
+                <th>LabourCharges</th>
+                <th>ServiceCharges</th>
+                <th>InvoiceDate</th>
+                <th>InsuranceNo</th>
+                <th>Service ID</th>
+                
+        </tr>
+        <tr *ngFor = "let invoice of invoices">
+            <td>{{invoice.invoiceId}}</td>
+                <td>{{invoice.labourCharges}}</td>
+                <td>{{invoice.serviceCharges}}</td>
+                <td>{{invoice.date}}</td>
+                <td>{{invoice.insurance.insuranceNo}}</td>
+                <td>{{invoice.service.serviceId}}</td>
+        </tr>
+        <tr *ngIf="invoices && invoices.length==0">
+            <td colspan ="6">No records found !</td>
+        </tr>
+    </table>
+</div>
+
+

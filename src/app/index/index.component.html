@@ -1,0 +1,61 @@
+<!-- <h1>Welcome To Vehicle Service Center</h1> -->
+<!-- <div class="area">Welcome To Vehicle Service Center</div> -->
+<h1 class="ml3">Welcome To Vehicle Service Center</h1>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 mb-3">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="../assets/car-dealership-service.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">New Customer</p>
+          <a href="addCustomer" class="btn btn-secondary">Click</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-lg-4 mb-3">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="../assets/car-dealership-service.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">Existing Customer</p>
+          <a href="addServiceFault" class="btn btn-secondary">Click</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class=" mb-3">
+      <div class="card" style="width: 15rem;">
+        <img class="card-img-top" src="../assets/car-dealership-service.jpg" alt="">
+        <div class="card-body">
+          <p class="card-text">
+            Details Of Customer
+          </p>
+          <div ngbDropdown class="btn-group">
+            <button type="button" class="btn btn-secondary">Details</button>
+            <button ngbDropdownToggle type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div ngbDropdownMenu class="dropdown-menu">
+              <a ngbDropdownItem class="dropdown-item"  href="customers" target="_blank">Customers</a>
+              <a ngbDropdownItem class="dropdown-item" href="vehicles" target="_blank">Vehicles</a>
+              <a ngbDropdownItem class="dropdown-item" href="insurances" target="_blank">Insurances</a>
+              <a ngbDropdownItem class="dropdown-item" href="mechanics" target="_blank">Mechanics</a>
+              <a ngbDropdownItem class="dropdown-item" href="services" target="_blank">Services</a>
+              <a ngbDropdownItem class="dropdown-item" href="invoices" target="_blank">Invoices</a>
+              <a ngbDropdownItem class="dropdown-item" href="jobCards" target="_blank">JobCards</a>
+             
+            </div>
+          </div>
+
+          <!-- <a href="#!" class="btn btn-primary">Click</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
