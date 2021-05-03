@@ -46,6 +46,7 @@ export class VehicleComponent implements OnInit {
     this.statusMessage="Problem with service. Please try again later!!";
     }
     );
+    alert('Data Successfully Added!! :-)\n\n');
     this._router.navigate(['addInsurance']);
   }
 
@@ -67,6 +68,7 @@ export class VehicleComponent implements OnInit {
       this.statusMessage="Problem with service. Please try again later!!";
     });
     this.reset();
+
     console.log("end of deleteVehicle()");
   }
 

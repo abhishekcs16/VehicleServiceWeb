@@ -46,6 +46,7 @@ export class ServiceFaultComponent implements OnInit {
     this.statusMessage="Problem with service. Please try again later!!";
     }
     );
+    alert('Data Successfully Added!! :-)\n\n');
     this._router.navigate(['addInvoice']);
   }
 

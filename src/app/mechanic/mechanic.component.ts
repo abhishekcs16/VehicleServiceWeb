@@ -43,6 +43,7 @@ export class MechanicComponent implements OnInit {
     this.statusMessage="Problem with service. Please try again later!!";
     }
     );
+    alert('Data Successfully Added!! :-)\n\n');
   }
 
   private reset(){
